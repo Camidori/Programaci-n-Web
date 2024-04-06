@@ -1,0 +1,140 @@
+:root{
+    --estado-buda: 0.3s;
+    --cada-item: 28px;
+    --cantidad-items: 0;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    margin:0;
+    font-family: sans-serif;
+    font-size: 16px;
+   
+}
+
+header{
+    width:20%;
+    min-height: 100vh;
+    height: all;
+    background: #1E1E1E;
+    font-family: sans-serif;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 16px;
+}
+
+nav ul li{
+    border-bottom: 1px solid #1E1E1E;
+}
+
+nav ul a{
+    box-sizing: border-box;
+    color: white;
+    background: #121212;
+    display: block;
+    width: 100%;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+nav ul ul{
+    height: 0px;
+    overflow: hidden;
+    transition: var(--estado-buda);
+    counter-reset: items;
+}
+nav ul ul li{
+    counter-increment: items;
+}
+
+
+nav ul li:hover ul{
+    height: calc( var(--cantidad-items) * var(--cada-item) );
+
+   
+    background: linear-gradient(90deg, rgb(83, 129, 98) 0%, rgba(67,103,17,1) 35%, rgb(163, 129, 56) 100%);
+
+}
+
+nav ul ul a{
+    background: transparent;
+}
+
+
+.titulo{
+    text-align: center;
+    color: aliceblue;
+    font-size:20px;
+    font-family: sans-serif;
+    text-align: left;
+    margin: none;
+}
+
+
+.parrafo1{
+    background-image: linear-gradient(1000deg, #fda085,#f6d365);
+    background-size: 100%;
+    padding:25%;
+    width:3473%;
+    height:22.625%;
+
+}
+
+.parrafo2{
+    background-image: linear-gradient(135deg,#a18cd1,#fbc2eb);
+    background-size: 100%;
+    padding:25%;
+    width:3473%;
+    height:22.625%;
+
+
+}
+
+.parrafo3{
+    background-image: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    background-size: 100%;
+    padding:25%;
+    width:3473%;
+    height:22.625%;
+
+}
+
+.parrafo4{
+    background-image: linear-gradient(135deg,#a6c0fe,#f68084);
+    background-size: 100%;
+    padding:25%;
+    width:3473%;
+    height:22.625%;
+
+}
+
+a{
+    border: 0;
+    background-image: linear-gradient(150deg,#9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color:white;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+a span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+a:hover span{
+    background: none;
+}
+
+a:active{
+    transform: scale(0.9);
+}
